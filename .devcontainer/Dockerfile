@@ -8,11 +8,13 @@ git \
 unzip \
 xz-utils \
 zip \
+cmake \
 && rm -rf /var/lib/apt/lists/*
 
 # Installe Flutter SDK
-RUN git clone https://github.com/flutter/flutter.git /usr/local/flutter
-
+RUN git clone https://github.com/flutter/flutter.git /usr/local/flutter \
+    && git config --global --add safe.directory /usr/local/flutter \
+    && chown -R vscode:vscode /usr/local/flutter
 # Ajoute Flutter au PATH
 ENV PATH="/usr/local/flutter/bin:${PATH}"
 
