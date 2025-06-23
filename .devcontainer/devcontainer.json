@@ -1,0 +1,16 @@
+
+{
+  "name": "Flutter Development Environment",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "editor.formatOnSave": true
+  },
+  "extensions": [
+    "Dart-Code.flutter",
+    "Dart-Code.dart-code",
+    "ms-vscode.cpptools",
+    "esbenp.prettier-vscode"
+  ],
+  "postCreateCommand": "flutter doctor"
+}
